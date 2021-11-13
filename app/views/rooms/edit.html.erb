@@ -1,0 +1,11 @@
+<h2>room編集ページ</h2>
+
+<%= form_for @room do |f| %>
+<%= f.label :room_name %>
+<%= f.text_field :room_name %>
+
+<%= f.label :body %>
+<%= f.text_area :body %>
+
+<%= f.submit %>
+<% end %>

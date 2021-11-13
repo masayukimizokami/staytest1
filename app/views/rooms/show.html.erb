@@ -1,0 +1,22 @@
+<h1>Rooms#show</h1>
+<p>Find me in app/views/rooms/show.html.erb</p>
+
+<%= @room.room_name %>
+
+<%= @room.body %>
+
+<%= simple_format @room.body %>
+
+<% if @room.user.id == current_user.id %>
+  <%= link_to "編集" , edit_room_path(@room), class: "button is-success"%>
+<% end %>
+
+<%= @room.user.username %>
+<%= @room.user.profile %>
+
+
+<%= link_to user_path(@room.user) do %>
+  <%= @room.user.username %>さんのページへ
+<% end %>
+
+

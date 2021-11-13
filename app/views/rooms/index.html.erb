@@ -1,0 +1,21 @@
+<h1>Rooms#index</h1>
+<p>Find me in app/views/rooms/index.html.erb</p>
+
+<% @rooms.each do |room| %>
+
+<h1>部屋の一覧紹介</h1>
+
+<%= link_to room_path(room) do %>
+  roomにリンク
+<% end %>
+
+<%=link_to room.user.username , user_path(room.user.id) %>
+
+<%= room.updated_at .strftime("%Y-%m-%d %H:%M") %>更新
+
+<%= link_to user_path(room.user.id) do %>
+  userにリンク
+<% end %>
+
+
+<% end %>
